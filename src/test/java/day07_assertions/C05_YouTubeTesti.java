@@ -58,7 +58,6 @@ static WebDriver driver;
 //    ○ wrongTitleTest  => Sayfa basliginin “youtube” olmadigini dogrulayin
         String actualWrongTitle=driver.getTitle();
         String expectedWrongTitle="youtube";
-
         Assert.assertFalse(expectedWrongTitle.contains(actualWrongTitle));
     }
 
