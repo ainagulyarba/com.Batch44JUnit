@@ -60,11 +60,12 @@ String sonucSayisi=driver.findElement(By.xpath("//*[@id='search']/span/div/span/
     //  4. Sonucun Java kelimesini icerdigini test edin
    String javaKelimesi=driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']")).getText();
     System.out.println(javaKelimesi);
-   String actuelKelime=javaKelimesi.replaceAll("\\D","");
-  String expectedKelime="Java";
-   if(expectedKelime.contains(actuelKelime)){
+
+   boolean isTrue= javaKelimesi.contains("Java");
+
+   if(isTrue) {
        System.out.println("Sonucun Java kelimesinin icerdigi testi PASS");
-   }else {
+   }  else {
        System.out.println("Sonucun Java kelimesinin icerdigi testi FAILED");
    }
 }
